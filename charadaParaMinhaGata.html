@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Charadinha pra Lauane 💜</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #fff1f5, #e6eafc);
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2.4rem;
+      margin-bottom: 1rem;
+      color: #8a2be2;
+    }
+
+    .charada {
+      font-size: 1.3rem;
+      margin: 1rem 2rem;
+      max-width: 600px;
+      background: #ffffff;
+      padding: 1.5rem;
+      border-radius: 1.5rem;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    input {
+      margin-top: 1rem;
+      padding: 0.6rem;
+      font-size: 1rem;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      width: 60%;
+      max-width: 300px;
+      text-align: center;
+    }
+
+    button {
+      margin-top: 1rem;
+      padding: 0.6rem 1.4rem;
+      font-size: 1rem;
+      background-color: #8a2be2;
+      color: #fff;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #6f1ed8;
+    }
+
+    .resposta {
+      margin-top: 2rem;
+      font-size: 1.2rem;
+      color: #8a2be2;
+      font-weight: bold;
+      display: none;
+    }
+
+    .assinatura {
+      margin-top: 3rem;
+      font-size: 0.95rem;
+      color: #777;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2rem;
+      }
+
+      .charada {
+        font-size: 1.1rem;
+        padding: 1rem;
+        margin: 1rem;
+      }
+
+      input {
+        width: 80%;
+      }
+
+      .resposta {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Oi, Lauane 💜</h1>
+  <div class="charada">
+    Charadinha pra você:<br><br>
+    “Braba que só, mas quando sorri, o mundo desacelera. Gosta de coisas simples, tem um brilho único, e até o silêncio dela tem graça...<br><br>
+    Quem é ela?”<br><br>
+    (Dica: a resposta é curtinha — e linda como você.)
+    <br>
+    <input type="text" id="respostaInput" placeholder="Digite sua resposta" />
+    <button onclick="verificarResposta()">Responder</button>
+  </div>
+
+  <div class="resposta" id="resposta">💜 É você, meu amor. Só podia ser. E que bom que você sabe disso.</div>
+
+  <div class="assinatura">Com carinho, Flávio 🫶</div>
+
+  <script>
+    function verificarResposta() {
+      const resposta = document.getElementById('respostaInput').value.trim().toLowerCase();
+      if (resposta === "eu") {
+        document.getElementById('resposta').style.display = 'block';
+      } else {
+        alert("Hmm... não foi dessa vez, tente novamente.");
+      }
+    }
+  </script>
+</body>
+</html>
+</html>
